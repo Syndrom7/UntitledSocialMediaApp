@@ -23,7 +23,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/create', [PostController::class, 'store'])->name('post.store');
     Route::post('/update', [PostController::class, 'update'])->name('post.update');
     Route::get('/delete/{id}', [PostController::class, 'delete'])->name('post.delete');
-    Route::post('/{id}/comment', [PostController::class, 'createComment'])->name('create.comment');
+    Route::post('/comment/{id}', [PostController::class, 'createComment'])->name('create.comment');
     Route::post('/like-post/{id}',[PostController::class,'likePost'])->name('like.post');
     Route::post('/unlike-post/{id}',[PostController::class,'unlikePost'])->name('unlike.post');
 });

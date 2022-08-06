@@ -189,7 +189,7 @@
                 <a href="#!"> <img class="avatar-img rounded-circle" src="{{ url(Auth::user()->image) }}" alt=""> </a>
               </div>
               <!-- Comment box  -->
-              <form class="w-100" method="POST" action="{{ url('/'.$post->id.'/comment') }}">
+              <form class="w-100" method="POST" action="{{ url('/comment/'.$post->id) }}">
                 @csrf
                 <input type="text" name="comment" data-autoresize class="form-control pe-4 bg-light" rows="1" placeholder="Add a comment..."></input>
               </form>
